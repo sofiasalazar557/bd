@@ -1,0 +1,3 @@
+SELECT *
+FROM treintaco-bz.data_marts_pos.pos_logistic
+where date(created_at_status) = "2023-03-21"
