@@ -1,0 +1,5 @@
+SELECT *,
+date_diff(date(delivery_date),date(created_at_status), DAY) as Dif_dias
+FROM  treintaco-bz.data_marts_pos.pos_logistic 
+where date(created_at_status) >= "2023-03-01" and tipo_envio = "LOCAL" 
+order by Dif_dias desc
